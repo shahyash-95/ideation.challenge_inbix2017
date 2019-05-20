@@ -25,7 +25,7 @@ from sklearn.model_selection import StratifiedKFold
 import matplotlib.pyplot as plt
 from sklearn.model_selection import cross_val_score,cross_val_predict,train_test_split 
 
-df1=p.read_csv("C:/Users/YASH/Documents/Training-set.csv")
+df1=p.read_csv("/Training-set.csv")
 df3=df1.set_index(df1.columns[0])
 Y= p.Series(df3["CLASS"])
 train_set=df3.drop("CLASS",axis=1)
@@ -55,7 +55,7 @@ print("features selected",features_selected)
 #file = open('C:/Users/YASH/Documents/features.txt','w')  
 #file.write(features_selected)  #copy features to text file
 #np.savetxt('C:/Users/YASH/Documents/lr-features.txt',features_selected, fmt='%s')
-np.savetxt('C:/Users/YASH/Documents/mlp-features.txt',features_selected, fmt='%s', delimiter='\n')
+np.savetxt('/mlp-features.txt',features_selected, fmt='%s', delimiter='\n')
 
 #transform
 X_new=X_new.transpose()
